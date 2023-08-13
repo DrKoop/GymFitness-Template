@@ -121,7 +121,7 @@ hr{
 }
 
 .text-primary{
-    color: var(--primario);
+    color: var(--primario) !important;
 }
 
 .text-blanco{
@@ -270,4 +270,82 @@ hr{
 
 /* -------------------------------------------------------------------------- */
 /*                                   /FOOTER                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                    CARDS                                   */
+/* -------------------------------------------------------------------------- */
+
+.listado-grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width:768px) {
+    
+    .listado-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card-clases{
+    border-radius: 1rem;
+    background-image: linear-gradient(to bottom, transparent 0, rgb(0 0 0 / .7)) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-clases:hover img{
+    transform: scale(1.1);
+}
+
+.card-clases img{
+    display: block;
+    position: relative;
+    z-index: -1;
+    height: 40rem;
+    object-fit: cover;
+    transition: transform 300ms ease;
+}
+
+.card-clases .contenido{
+     position: absolute !important;
+     bottom: 0;
+     left: 0;
+     padding: 2rem;
+}
+
+.card-clases .contenido h3{
+    color: var(--blanco);
+    margin: 0;
+}
+
+.card-clases .contenido p{
+    color: var(--blanco);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    /CARDS                                  */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   SIDEBAR                                  */
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    .con-sidebar{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.informacion-clase{
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: center;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   /SIDEBAR                                 */
 /* -------------------------------------------------------------------------- */

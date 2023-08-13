@@ -5,8 +5,32 @@ function gymfitness_setup(){
     add_theme_support('post-thumbnails');
     //Titulos meta-SEO
     add_theme_support('title-tag');
+    //Widgets
 }
 add_action('after_setup_theme','gymfitness_setup');
+
+
+function gymfitness_widgets(){
+    register_sidebar(array(
+        'name' => 'Sidebar GYMFitness 1',
+        'id' => 'sidebar_1',
+        'before_widget' => '<div class="widget-gym">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="text-center text-primary">',
+        'after_title' => '</h3>'
+    ));
+
+    register_sidebar(array(
+        'name' => 'Sidebar GYMFitness 2',
+        'id' => 'sidebar_2',
+        'before_widget' => '<div class="widget-gym">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="text-center text-primary">',
+        'after_title' => '</h3>'
+    ));
+
+}
+add_action('widgets_init','gymfitness_widgets');
 
 
 function gymfitness_menus(){
