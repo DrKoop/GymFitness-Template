@@ -14,7 +14,7 @@
                     </a>
                 </p>
 
-                <div class="categoria">
+                <div class="categoria"></div>
                     <p class="meta">
                         <span>Categoría: </span>
                     </p>

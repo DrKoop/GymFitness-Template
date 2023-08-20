@@ -500,3 +500,51 @@ hr{
 /* -------------------------------------------------------------------------- */
 /*                                  /INFO-META                                */
 /* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                 FORMULARIO                                 */
+/* -------------------------------------------------------------------------- */
+
+.wpcf7-form label{
+    font-weight: 700;
+    width: 100%
+}
+
+.wpcf7-form .wpcf7-form-control .wpcf7-textarea .wpcf7-text .wpcf7-emai{
+    display: block;
+    width: 100% !important;
+    border: 1px solid var(--gris-claro);
+    padding: 1rem;
+}
+
+.wpcf7-form .wpcf7-submit{
+    width: 100%;
+    background-color: var(--primario);
+    font-size: 2rem;
+    font-family: var(--feunte-headings);
+    padding: 1.2rem;
+    border-radius: 1rem;
+}
+
+.wpcf7-form .wpcf7-submit:hover{
+    cursor: pointer;
+}
+
+.wpcf7-form  .wpcf7-not-valid-tip{
+    background-color: rgba(221, 8, 8, 0.961);
+    color: var(--blanco);
+    padding: .5rem;
+    margin: .5rem 0;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.wpcf7-form .wpcf7-spinner{
+    display: block;
+    margin: 2rem auto 0 auto;
+    background-color: var(--primario);
+    opacity: 1;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 /FORMULARIO                                */
+/* -------------------------------------------------------------------------- */
