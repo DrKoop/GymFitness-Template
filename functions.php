@@ -1,6 +1,7 @@
 <?php 
 //Includes
 require get_template_directory() . '/includes/widgets.php';
+require get_template_directory() . '/includes/queries.php';
 
 function gymfitness_setup(){
     //Imagenes destacadas
@@ -34,6 +35,23 @@ function gymfitness_widgets(){
 }
 add_action('widgets_init','gymfitness_widgets');
 
+//Shortcode
+function gymfitness_ubicacion_shortcode(){
+
+    ?>
+        <div class="mapa">
+            <?php 
+                if(is_page('contacto')){
+                    the_field('ubicacion');
+                }
+            ?>    
+        </div>
+        <h2 class="text-center text-primary">Formulario de Contacto</h2>
+    <?php
+    echo  do_shortcode('[contact-form-7 id="4ef2a9d" title="GymForm"]');
+}
+add_shortcode('gymfitness_ubicacion', 'gymfitness_ubicacion_shortcode');
+
 
 function gymfitness_menus(){
     register_nav_menus( array(
@@ -56,5 +74,8 @@ function gymfitness_scripts_styles(){
 
 }
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
+
+
+
 
 ?>
