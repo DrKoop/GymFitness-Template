@@ -15,7 +15,7 @@
 
 :root{
     --fuente-principal:'Raleway', sans-serif;
-    --feunte-headings:'Staatliches', cursive;
+    --fuente-headings:'Staatliches', cursive;
 
     --primario: #ff5b00;
     --gris-oscuro: #2f2e2e;
@@ -46,7 +46,7 @@ body{
 /*                                  HEADINGS                                  */
 /* -------------------------------------------------------------------------- */
 h1,h2,h3,h4{
-    font-family: var(--feunte-headings);
+    font-family: var(--fuente-headings);
     margin: 0 0 5rem 0;
     line-height: 1.2;
 }
@@ -206,7 +206,7 @@ hr{
 }
 
 .menu-principal a{
-    font-family: var(--feunte-headings);
+    font-family: var(--fuente-headings);
     display: block;
     text-align: center;
     color: var(--blanco);
@@ -292,7 +292,7 @@ hr{
 
 .copyright{
     text-align: center;
-    font-family: var(--feunte-headings);
+    font-family: var(--fuente-headings);
     font-size: 1.8rem;
     margin: 2rem 0 0 0;
 }
@@ -558,7 +558,7 @@ hr{
     width: 100%;
     background-color: var(--primario);
     font-size: 2rem;
-    font-family: var(--feunte-headings);
+    font-family: var(--fuente-headings);
     padding: 1.2rem;
     border-radius: 1rem;
 }
@@ -665,6 +665,133 @@ hr{
     }
 }
 
+.instructor{
+    margin: 2rem 0;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.instructor:last-of-type{
+    border: none;
+}
+
+@media (min-width: 992px) {
+    .instructor{
+        position: relative;
+    }
+}
+
+.instructor img{
+    height: 40rem;
+    object-fit: cover;
+}
+
+.instructor .contenido{
+    padding: 3rem;
+}
+
+@media (min-width: 992px) {
+    .instructor .contenido{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / .75);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--blanco);
+        opacity: 0;
+        transition: opacity .5s ease-out;
+        transition-delay: .2s;
+    }
+
+    .instructor:hover .contenido{
+        opacity: 1;
+    }
+}
+
+.instructor h3{
+    margin-bottom: 3rem;
+}
+
+.especialidad {
+    margin-top: 2rem;
+}
+
+.instructor .etiqueta{
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-family: var(--fuente-headings);
+    margin-right: 2rem;
+    font-size: 2.2rem;
+    border-radius: .5rem;
+    padding: .5rem 2rem;
+}
+
+.instructor .etiqueta:last-of-type{
+    margin-right: 0;
+}
+
+.testimoniales{
+    background: linear-gradient(
+        rgb(0 0 0 / .75),
+        rgb(0 0 0 / .75)
+    ), url(img/testimonial-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 12rem 0;
+}
+
+.contenedor-testimoniales{
+    width: min(95%, 80rem);
+    margin: 0 auto;
+}
+
+.testimonial{
+    color: var(--blanco);
+}
+
+.testimonial blockquote{
+    position: relative;
+    padding-left: 12rem;
+}
+
+.testimonial blockquote::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url(img/quote.svg);
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+}
+
+.testimonial-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+
+    .testimonial-footer{
+        justify-content: flex-end;
+    } 
+}
+
+.testimonial-footer img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.testimonial-footer p{
+    font-weight: 700;
+    color: var(--primario);
+}
 /* -------------------------------------------------------------------------- */
 /*                           /PAGINA-INICIO-PRINCIPAL                         */
 /* -------------------------------------------------------------------------- */

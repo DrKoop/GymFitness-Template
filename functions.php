@@ -67,14 +67,41 @@ function gymfitness_scripts_styles(){
 
     wp_enqueue_style('lightbox', get_template_directory_uri() . '/css/lightbox.min.css' ,array(),'2.11.4');
 
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css' ,array(),'10.2.0');
+
     wp_enqueue_style('style', get_stylesheet_uri(),array('normalize'),'1.0.0');
 
     //Scripts
     wp_enqueue_script( 'lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js',array('jquery'),'2.11.4',true);
 
+    wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js',array(),'10.2.0',true);
+
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('swiper-js'),'1.0.0',true);
+
 }
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
 
+
+//Imagenes dinamicas como backround
+function gymfitness_hero_imagen(){
+
+    //Obtner ID de la pagina (Index)
+    $front_id = get_option('page_on_front');
+
+    //Obtener imagen
+    $id_imagen = get_field('hero_imagen', $front_id);
+
+    //Obtener ruta
+    $ruta_imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
+
+    var_dump($ruta_imagen);
+
+    //CSS
+
+    //Inyectar CSS
+
+}
+add_action('init','gymfitness_hero_imagen');
 
 
 
