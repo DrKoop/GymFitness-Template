@@ -122,24 +122,27 @@ hr{
     text-decoration: none;
 }
 
+.form-submit .submit,
 .boton{
-
     background-color: var(--blanco);
     color: var(--negro);
     padding: 1rem 3rem;
     display: block;
     flex: 1;
+    width: 100%;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: .5rem;
     margin: 1rem 0;
+    border: none;
 }
 
 @media (min-width: 768px) {
     .boton{
         display: inline-block;
         flex: 0 0 auto;
+        width: auto;
     }
 }
 
@@ -172,6 +175,77 @@ hr{
 /* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
+
+body.home .header{
+    padding-top: 2rem;
+    height: auto;
+    min-height: 70rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    body.home .header{
+        height: 100vh;
+        max-height: 90rem;
+    }
+}
+
+.tagline{
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .tagline{
+        margin-top: 15rem;
+    }
+}
+
+.tagline p{
+    font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+    .fixed-top{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--gris-oscuro);
+        padding: 1rem 5rem;
+        height: 10rem;
+        z-index: 1000;
+        transition: background-color 300ms ease-in-out;
+    }  
+
+    .fixed-top .logo{
+        width: 12rem;
+    }
+}
+
+
+/* Heade Animation */
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+  }
+  
+.ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+  
+.ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
 .header{
     background-color: var(--gris-oscuro);
     padding: 2rem 0;
@@ -193,6 +267,39 @@ hr{
 /* .menu-principal {
     display: none;
 } */
+
+.hamburguer-menu:hover{
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .hamburguer-menu{
+        display: none;
+    }
+}
+
+.contenedor-menu{
+    opacity: 0;
+    max-height: 0;
+    transition-delay: 100ms, 300ms;
+    transition-property: opacity,max-height;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+}
+
+@media (min-width: 768px) {
+    .contenedor-menu{
+        all: unset;
+    }
+}
+
+.mostrar{
+    opacity: 1;
+    max-height: 35rem;
+    transition-delay: 100ms, 300ms;
+    transition-property: max-height, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+}
 
 @media (min-width: 768px) {
 
@@ -534,6 +641,11 @@ hr{
     gap: .5rem;
 }
 
+.meta-info .post-categories{
+    display: flex;
+    gap: 1rem;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                  /INFO-META                                */
 /* -------------------------------------------------------------------------- */
@@ -795,3 +907,93 @@ hr{
 /* -------------------------------------------------------------------------- */
 /*                           /PAGINA-INICIO-PRINCIPAL                         */
 /* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                              COMENTARIOS FORM                              */
+/* -------------------------------------------------------------------------- */
+
+.comentarios{
+    width: min(95%, 60rem);
+    margin: 5rem auto 0 auto;
+}
+
+.comment-reply-title{
+   color: var(--primario); 
+   text-align: center;
+}
+
+.logged-in-as a{
+    color: var(--primario);
+}
+
+.comment-form-comment label{
+    font-weight: 700;
+    margin-bottom: 2rem 0;
+    display: block;
+}
+
+.form-submit .submit{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+.comment-form-comment textarea,
+.comentarios input[type="text"]{
+    border: 1px solid var(--gris-claro);
+    width: 100%;
+    padding: 1rem;
+}
+
+.comentarios input[type="text"]{
+    margin: .5rem 0;
+}
+
+h3.title-comments{
+    margin: 3rem 0;
+}
+
+.lista-comentarios .comment{
+    background-color: var(--gris-claro);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+}
+
+.lista-comentarios a{
+    color: var(--primario);
+}
+
+.lista-comentarios cite{
+    color: var(--primario);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.lista-comentarios .children .comment{
+    background-color: var(--blanco);
+    margin: 2rem 0;
+}
+
+.pagination .screen-reader-text{
+    visibility: hidden;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.nav-links a{
+    font-size: 2.4rem;
+    color: var(--primario);
+    font-weight: 700;
+    padding: .5rem;
+}
+
+.nav-links .current{
+    font-size: 2.4rem;
+    padding: .5rem;
+}

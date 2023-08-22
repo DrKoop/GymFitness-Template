@@ -53,6 +53,40 @@ function gymfitness_ubicacion_shortcode(){
 add_shortcode('gymfitness_ubicacion', 'gymfitness_ubicacion_shortcode');
 
 
+//Imagenes dinamicas como background
+function gymfitness_hero_imagen(){
+
+    //Obtner ID de la pagina (Index)
+    $front_id = get_option('page_on_front');
+
+    //Obtener imagen
+    $id_imagen = get_field('hero_imagen', $front_id)['ID'];
+
+    //var_dump($id_imagen);
+
+    //Obtener ruta
+    $ruta_imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
+
+    //var_dump($ruta_imagen);
+
+    //CSS
+    wp_register_style('customheader', false);
+    wp_enqueue_style( 'customheader', );
+
+    $imagen_destacada = "
+        body.home .header{
+            background-image: linear-gradient( rgb(0 0 0 / .75),rgb(0 0 0 / .75)),url($ruta_imagen);
+        }
+    
+    "; 
+
+    //Inyectar CSS
+    wp_add_inline_style('customheader',$imagen_destacada);
+
+}
+add_action('init','gymfitness_hero_imagen');
+
+
 function gymfitness_menus(){
     register_nav_menus( array(
         'menu-principal' => __('Menu Principal Gym','gymfitness')
@@ -76,32 +110,15 @@ function gymfitness_scripts_styles(){
 
     wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js',array(),'10.2.0',true);
 
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('swiper-js'),'1.0.0',true);
+    wp_enqueue_script( 'anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',array(),'2.0.2',true);
+
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('swiper-js','anime'),'1.0.0',true);
 
 }
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
 
 
-//Imagenes dinamicas como backround
-function gymfitness_hero_imagen(){
 
-    //Obtner ID de la pagina (Index)
-    $front_id = get_option('page_on_front');
-
-    //Obtener imagen
-    $id_imagen = get_field('hero_imagen', $front_id);
-
-    //Obtener ruta
-    $ruta_imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
-
-    var_dump($ruta_imagen);
-
-    //CSS
-
-    //Inyectar CSS
-
-}
-add_action('init','gymfitness_hero_imagen');
 
 
 

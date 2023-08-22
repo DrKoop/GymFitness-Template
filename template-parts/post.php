@@ -7,6 +7,7 @@
             }
             ?>
             <div class="meta-info">
+            
                 <p class="meta">
                     <span>Por: </span>
                     <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"> 
@@ -19,12 +20,13 @@
                         <span>Categoría: </span>
                     </p>
                         <?php the_category(); ?>
+
+                    <p class="meta">
+                        <span>Fecha: </span>
+                        <?php the_time(get_option('date_format')); ?>
+                    </p>
                 </div>
 
-                <p class="meta">
-                    <span>Fecha: </span>
-                    <?php the_time(get_option('date_format')); ?>
-                </p>
             </div>
             <?php
             the_content();

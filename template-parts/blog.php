@@ -2,6 +2,7 @@
     <?php the_category(); ?>
     <?php the_post_thumbnail(); ?>
     <div class="contenido">
+        
 
         <a href=" <?php the_permalink(); ?> ">
             <h3><?php the_title(); ?></h3>
@@ -16,7 +17,7 @@
 
         <p class="meta">
             <span>Fecha: </span>
-            <?php the_time(get_option('date_format')); ?>
+            <?php  the_time(get_option('date_format')); ?>
         </p>
     </div>
 </li>
