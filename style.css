@@ -675,6 +675,10 @@ body.home .header{
     border-radius: 1rem;
 }
 
+.wpcf7-form input,textarea{
+    width: 100%;
+}
+
 .wpcf7-form .wpcf7-submit:hover{
     cursor: pointer;
 }
