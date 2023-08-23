@@ -10,7 +10,7 @@ Bakend WP Custom PLugin PostTypes ->
 
 More About The Theme->
 ![demo6-min](https://github.com/DrKoop/GymFitness-Template/assets/95058605/180a405d-1340-42f4-aa29-ffb2ae19f6e6)
-
+![demo7-min(1)](https://github.com/DrKoop/GymFitness-Template/assets/95058605/ff3adc7e-9091-4a63-8d3e-01081f065c40)
 
 
 Full Responsive ->
