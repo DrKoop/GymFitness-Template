@@ -5,4 +5,4 @@ Index ->
 ![demo3](https://github.com/DrKoop/GymFitness-Template/assets/95058605/6875ba4a-9e72-4480-99aa-4357981a99ca)
 
 Bakend WP Custom PLugin PostTypes ->
-![demo4](https://github.com/DrKoop/GymFitness-Template/assets/95058605/30d0795c-dcc1-455a-bc95-70918635e907)
+![demo4](https://github.com/DrKoop/GymFitness-Template/assets/95058605/bc7bc739-d4fd-4ebc-b6d4-82acaae972c6)
