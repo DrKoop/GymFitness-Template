@@ -6,3 +6,9 @@ Index ->
 
 Bakend WP Custom PLugin PostTypes ->
 ![demo4](https://github.com/DrKoop/GymFitness-Template/assets/95058605/bc7bc739-d4fd-4ebc-b6d4-82acaae972c6)
+
+
+More About The Theme->
+
+Full Responsive ->
+![demo5](https://github.com/DrKoop/GymFitness-Template/assets/95058605/1672cd5f-5e55-418b-b637-cd4a0a1dbe04)
